@@ -40,3 +40,17 @@ Subject
 1) PublishSubject
 2) BehaviorSubject
 3) ReplaySubject
+
+
+list.joinToString("separator"){ }
+
+list.map { }
+list.fold(initialValue) { s, a -> ()}
+
+things missed
+===========
+1) sealed class
+2) extension method in supportCode - IntRange.random()
+
+
+(0 until 1) forEach{ println(it)} // 0 => exclusive 1
