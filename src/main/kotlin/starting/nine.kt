@@ -9,12 +9,15 @@ import io.reactivex.disposables.CompositeDisposable
 import io.reactivex.rxkotlin.subscribeBy
 import io.reactivex.subjects.BehaviorSubject
 import io.reactivex.subjects.PublishSubject
+import io.reactivex.subjects.ReplaySubject
 import itsNotMyFault
 import lackOfFaith
 import mayThe4thBeWithYou
 import mayTheForceBeWithYou
 import printWithLabel
 import stayOnTarget
+import theForceIsStrong
+import useTheForce
 
 fun main(args: Array<String>) {
 
@@ -71,5 +74,36 @@ fun main(args: Array<String>) {
         )
 
         subscriptions.add(subscriptionTwo)
+    }
+
+    exampleOf("ReplaySubject") {
+
+        val subscriptions = CompositeDisposable()
+
+        val quotes = ReplaySubject.createWithSize<String>(2)
+
+        quotes.onNext(useTheForce)
+
+        val subscriptionOne = quotes.subscribeBy(
+                onNext = { printWithLabel("1)", it) },
+                onError = { printWithLabel("1)", it) },
+                onComplete = { printWithLabel("1)", "Complete") }
+        )
+
+        subscriptions.add(subscriptionOne)
+
+        quotes.onNext(theForceIsStrong)
+        quotes.onNext(mayThe4thBeWithYou)
+
+        val subscriptionTwo = quotes.subscribeBy(
+                onNext = { printWithLabel("2)", it) },
+                onError = { printWithLabel("2)", it) },
+                onComplete = { printWithLabel("2)", "Complete") }
+        )
+
+        subscriptions.add(subscriptionTwo)
+
+        quotes.onNext(iAmYourFather)
+
     }
 }

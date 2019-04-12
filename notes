@@ -39,3 +39,4 @@ file.readText(kotlin.text.Charsets.UTF_8)
 Subject
 1) PublishSubject
 2) BehaviorSubject
+3) ReplaySubject
