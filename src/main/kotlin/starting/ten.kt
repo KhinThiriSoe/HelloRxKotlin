@@ -35,9 +35,6 @@ fun main(args: Array<String>) {
                 dealtHand.onError(HandError.Busted())
             else
                 dealtHand.onNext(hand)
-
-            // Add code to update dealtHand here
-
         }
 
         subscriptions.add(dealtHand.subscribeBy(
@@ -45,8 +42,6 @@ fun main(args: Array<String>) {
                 onError = { println(it)},
                 onComplete = { "Complete" }
         ))
-
-        // Add subscription to dealtHand here
 
         deal(3)
 
