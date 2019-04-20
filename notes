@@ -47,10 +47,12 @@ list.joinToString("separator"){ }
 list.map { }
 list.fold(initialValue) { s, a -> ()}
 
+ (0 until 1) forEach{ println(it)} // 0 => exclusive 1
+
+Observables.ignoreElements()
+Observables.elementAt()
+
 things missed
 ===========
 1) sealed class
 2) extension method in supportCode - IntRange.random()
-
-
-(0 until 1) forEach{ println(it)} // 0 => exclusive 1
