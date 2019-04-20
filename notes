@@ -49,8 +49,9 @@ list.fold(initialValue) { s, a -> ()}
 
  (0 until 1) forEach{ println(it)} // 0 => exclusive 1
 
-Observables.ignoreElements()
-Observables.elementAt()
+Observable.ignoreElements()
+Observable.elementAt(index)
+Observable.filter{ boolean }
 
 things missed
 ===========
