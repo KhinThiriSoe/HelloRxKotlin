@@ -23,7 +23,7 @@ fun <T> printWithLabel(label: String, element: T?) {
     println("$label $element")
 }
 
-sealed class Quote: Throwable() {
+sealed class Quote : Throwable() {
     class NeverSaidThat : Quote()
 }
 
@@ -55,9 +55,43 @@ fun cardString(hand: List<Pair<String, Int>>): String {
 
 fun points(hand: List<Pair<String, Int>>) = hand.fold(0) { s, a -> s + a.second }
 
-fun IntRange.random() = Random().nextInt(endInclusive - start) +  start
+fun IntRange.random() = Random().nextInt(endInclusive - start) + start
 
-sealed class HandError: Throwable() {
-    class Busted: HandError()
+sealed class HandError : Throwable() {
+    class Busted : HandError()
 }
 
+const val landOfDroids = "Land of Droids"
+const val wookieWorld = "Wookie World"
+const val detours = "Detours"
+
+const val mayTheOdds = "And may the odds be ever in your favor"
+const val liveLongAndProsper = "Live long and prosper"
+const val mayTheForce = "May the Force be with you"
+
+data class Movie(val title: String, val rating: Int)
+
+val episodeIMovie = Movie("The Phantom Menace", 55)
+val episodeIIMovie = Movie("Attack of the Clones", 66)
+val episodeIIIMovie = Movie("Revenge of the Sith", 79)
+val rogueOneMovie = Movie("Rogue One", 85)
+val episodeIVMovie = Movie("A New Hope", 93)
+val episodeVMovie = Movie("The Empire Strikes Back", 94)
+val episodeVIMovie = Movie("Return Of The Jedi", 80)
+val episodeVIIMovie = Movie("The Force Awakens", 93)
+val episodeVIIIMovie = Movie("The Last Jedi", 91)
+
+val tomatometerRatings = listOf(
+        episodeIMovie,
+        episodeIIMovie,
+        episodeIIIMovie,
+        rogueOneMovie,
+        episodeIVMovie,
+        episodeVMovie,
+        episodeVIMovie,
+        episodeVIIMovie,
+        episodeVIIIMovie)
+
+enum class Droid {
+    C3PO, R2D2
+}
