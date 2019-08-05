@@ -1,4 +1,4 @@
-package starting
+package starting.onefigure
 
 import cardString
 import cards
@@ -7,7 +7,6 @@ import io.reactivex.disposables.CompositeDisposable
 import io.reactivex.rxkotlin.subscribeBy
 import io.reactivex.subjects.PublishSubject
 import points
-import printWithLabel
 
 fun main(args: Array<String>) {
 

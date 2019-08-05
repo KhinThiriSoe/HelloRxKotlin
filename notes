@@ -53,7 +53,19 @@ Observable.ignoreElements()
 Observable.elementAt(index)
 Observable.filter{ boolean }
 
+Observable.skip()
+Observable.skipWhile{ }
+Observable.skipUntil(subject)
+
+Observable.take()
+Observable.takeWhile{ }
+Observable.takeUntil(subject)
+
+Observable.distinct()
+Observable.distinctUntilChanged()
+
 things missed
 ===========
 1) sealed class
 2) extension method in supportCode - IntRange.random()
+
