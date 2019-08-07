@@ -64,6 +64,8 @@ Observable.takeUntil(subject)
 Observable.distinct()
 Observable.distinctUntilChanged()
 
+Observable.debounce()
+
 things missed
 ===========
 1) sealed class
