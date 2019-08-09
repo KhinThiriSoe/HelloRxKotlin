@@ -135,3 +135,5 @@ enum class JediRank(val value: String) {
     JediMaster("Jedi Master"),
     JediGrandMaster("Jedi Grand Master")
 }
+
+const val sentinel = -1 // twentyFive
