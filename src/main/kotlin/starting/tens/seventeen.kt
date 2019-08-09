@@ -1,6 +1,5 @@
-package starting.onefigure
+package starting.tens
 
-import episodeI
 import episodeIIIMovie
 import episodeIIMovie
 import episodeIMovie
