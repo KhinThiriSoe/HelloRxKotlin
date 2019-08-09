@@ -67,6 +67,10 @@ Observable.distinctUntilChanged()
 Observable.share()
 Observable.debounce(int, TimeUnit, Scheduler)
 
+Observable.map
+Observable.flatMap
+Observable.switchMap
+
 things missed
 ===========
 1) sealed class
