@@ -75,6 +75,13 @@ Observable.startWith()
 Observable.concatWith()
 Observable.mergeWith()
 
+Observable.combineLatest()
+Observables.zip()
+Observable.ambWith()
+Observable.reduce()
+Observable.scan()
+
+
 things missed
 ===========
 1) sealed class
