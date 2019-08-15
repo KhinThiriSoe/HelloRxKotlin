@@ -71,6 +71,10 @@ Observable.map
 Observable.flatMap
 Observable.switchMap
 
+Observable.startWith()
+Observable.concatWith()
+Observable.mergeWith()
+
 things missed
 ===========
 1) sealed class
